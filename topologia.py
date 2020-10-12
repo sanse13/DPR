@@ -32,7 +32,7 @@ class MyTopo(Topo):
 			#creamos fo hosts por switch y linkeamos cada host al switch
 			for j in range(0, fo):
 
-				new_host = self.addHost('h_s'+str(i+1)+'_n'+str(j+1), cls=Host, ip='10.0.'+str(i+1)+'.'+str(j+1)+'/16')
+				new_host = self.addHost('h_'+str(i+1)+'_'+str(j+1), cls=Host, ip='10.0.'+str(i+1)+'.'+str(j+1)+'/16')
 				self.addLink(new_host, new_switch)
                                 
 topos = { 'personalTopo': (lambda : MyTopo())}
@@ -43,4 +43,3 @@ topos = { 'personalTopo': (lambda : MyTopo())}
 
 
 	
-
